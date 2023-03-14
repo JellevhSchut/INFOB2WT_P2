@@ -75,16 +75,14 @@ font-size: 60px;
     display: flex;
     align-items: center;
     padding: 10%;
-    margin-left: 20%;
-    
+    margin-left: 20%;  
 }
 
 .fototekst{
     width: 70%;
-    
 }
 
-.containerarticle {
+#containerarticle {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -92,23 +90,26 @@ font-size: 60px;
 
 /* article */
 
-.all-sections {
+#containertext {
     margin: 0;
     padding: 5px;
-    background-color: lightgray;
+    background-color: rgb(186, 186, 186);
     grid-column: 1 / 2;
 }
 
-.all-sections > h1, .section  {
+#containertext > h1 {
     margin: 10px;
     padding: 5px;
 }
 
-.section {
+.homepage-text {
     background: white;
+    margin: 4px;
+    padding: 6px 4px;
 }
 
-.section > h2, p {
+
+.homepage-text h2 {
     margin: 4px;
     font-size: 90%;
 }
