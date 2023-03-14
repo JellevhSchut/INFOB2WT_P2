@@ -19,7 +19,7 @@ ABREVIATIONS
     MINUS POINTS       		: -
 
 MUST HAVES
-	(-)	HTML	 frequent use of Div. There are other tags you can use, 			and you can avoid using a tag altogether if you structure your css well.
+	(-)	HTML	    frequent use of Div. There are other tags you can use, 			and you can avoid using a tag altogether if you structure your css well.
 	(-)	CSS	RD      bad RD. Mixed use of Pixel and percentager leading to a bad time.
                     percentage usage should be your default. Pixel usage should be for extremes or media queries
     (+) CSS RD      We failed you as TA's. Making it a point to give better direction. My input would not have leadyou towards a better grad my apologies for this.
