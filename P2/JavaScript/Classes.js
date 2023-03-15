@@ -80,10 +80,19 @@ class Movie {
     var h2Stars = document.createElement("h2");
     h2Stars.innerText = "Stars";
     sectionDirector.append(h2Stars);
+    // tooltips voor de actors
     var pStars = document.createElement("p");
-    pStars.innerText = this.stars.map((star) => star.name).join(", ");
+    this.stars.forEach((star) => {
+        var a = document.createElement("a");
+        a.innerText = star.name;
+        a.title = star.name + " has previously starred in: " + star.moviesStarred.join(", ");
+        pStars.append(a);
+        pStars.append(", ");
+    });
+    pStars.removeChild(pStars.lastChild); // laatste komma weghalen
     h2Stars.append(pStars);
 
+  
 
 
     // section voor poster en trailer
@@ -108,10 +117,6 @@ class Movie {
 
     // article appenden aan main
     mainpart.append(article);
-  }
-
-  addActors(){
-    document.createElement("main").addMe();
   }
 }
 
