@@ -27,9 +27,15 @@ class Actor extends Artist {
     this.moviesStarred = moviesStarred;
     this.photoLink = photoLink;
   }
+
+  addMe(domobject){
+    var actboi = document.createElement("section")
+    domobject.append(actboi);
+  }
 }
 
 class Movie {
+
   constructor(title, genre, year, director, writers, stars, poster, trailer, plot)   {
     this.title = title;
     this.genre = genre;
@@ -41,4 +47,18 @@ class Movie {
     this.trailer = trailer;
     this.plot = plot;
   }
+
+  addToBody(){
+    var mainpart = document.createElement("main");
+    mainpart.innerText = "the start of a project";
+    document.getElementsByTagName("body")[0].append(mainpart);
+  }
+  
+  addACtors(){
+
+  }
+
 }
+
+const test2 = new Movie("data","data","data","data","data","data","data","data")
+test2.addToBody();
