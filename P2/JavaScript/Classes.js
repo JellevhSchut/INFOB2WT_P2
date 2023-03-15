@@ -72,9 +72,12 @@ class Movie {
     var h2Director = document.createElement("h2");
     h2Director.innerText = "Director";
     sectionDirector.append(h2Director);
-    //
+    // tooltip voor de director
     var pDirector = document.createElement("p");
-    pDirector.innerText = this.director.name;
+    var a = document.createElement("a");
+    a.innerText = this.director.name;
+    a.title = this.director.name + " has also directed: " + this.director.moviesDirected.join(", ");
+    pDirector.append(a);
     h2Director.append(pDirector);
 
     var sectionWriters = document.createElement("section");
@@ -87,6 +90,7 @@ class Movie {
       var a = document.createElement("a");
       a.innerText = writer.name;
       a.title = writer.name + " has also written: " + writer.booksWritten.join(", ");
+      a.href = writer.photoLink;
       pWriters.append(a);
       pWriters.append(", ");
     });
@@ -105,6 +109,7 @@ class Movie {
         var a = document.createElement("a");
         a.innerText = star.name;
         a.title = star.name + " has previously starred in: " + star.moviesStarred.join(", ");
+        a.href = star.photoLink;
         pStars.append(a);
         pStars.append(", ");
     });
