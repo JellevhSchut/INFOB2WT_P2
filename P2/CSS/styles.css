@@ -104,13 +104,16 @@ font-size: 60px;
 
 .homepage-text {
     background: white;
-    margin: 4px;
+    margin: 1vh 0.5vw;
     padding: 6px 4px;
 }
 
+.homepage-text p {
+    margin: 5px 10px;
+}
 
 .homepage-text h2 {
-    margin: 4px;
+    margin: 5px 10px;
     font-size: 90%;
 }
 
