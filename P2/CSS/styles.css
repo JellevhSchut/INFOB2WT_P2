@@ -205,8 +205,11 @@ make the navigation links stack on top of each other instead of next to each oth
 }
 
 main {
-    font-size: 4em;
-    text-align: center;
+    font-size: 2em;
+    left: 20%;
+    right: 20%;
+    text-align: left;
+    position:absolute;
 }
 
 main p{ 

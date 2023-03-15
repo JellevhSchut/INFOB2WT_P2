@@ -15,7 +15,7 @@ class Director extends Artist {
 }
 
 class Writer extends Artist {
-  constructor(name, yearOfBirth, booksWritten) { // of scriptsWritten?
+  constructor(name, yearOfBirth, booksWritten) { 
     super(name, yearOfBirth);
     this.booksWritten = booksWritten;
   }
@@ -48,22 +48,76 @@ class Movie {
     this.plot = plot;
   }
 
-  //
-  addToBody(){
+   addToBody() {
+    // main element
     var mainpart = document.createElement("main");
-    mainpart.innerText = "the start of a project";
     document.getElementsByTagName("body")[0].append(mainpart);
+
+    // article met de titel als heading
+    var article = document.createElement("article");
+    var title = document.createElement("h1");
+    title.innerText = this.title;
+    article.append(title);
+
+    // section, h2 en p voor Plot, Director en Stars.
+    var sectionPlot = document.createElement("section");
+    var h2Plot = document.createElement("h2");
+    h2Plot.innerText = "Plot";
+    sectionPlot.append(h2Plot);
+    var pPlot = document.createElement("p");
+    pPlot.innerText = this.plot;
+    h2Plot.append(pPlot);
+
+    var sectionDirector = document.createElement("section");
+    var h2Director = document.createElement("h2");
+    h2Director.innerText = "Director";
+    sectionDirector.append(h2Director);
+    var pDirector = document.createElement("p");
+    pDirector.innerText = this.director.name;
+    h2Director.append(pDirector);
+
+    var sectionStars = document.createElement("section");
+    var h2Stars = document.createElement("h2");
+    h2Stars.innerText = "Stars";
+    sectionDirector.append(h2Stars);
+    var pStars = document.createElement("p");
+    pStars.innerText = this.stars.map((star) => star.name).join(", ");
+    h2Stars.append(pStars);
+
+
+
+    // section voor poster en trailer
+    var sectionPosterTrailer = document.createElement("section");
+    var imgPoster = document.createElement("img");
+    imgPoster.src = this.poster;
+    var iframeTrailer = document.createElement("iframe");
+    iframeTrailer.src = this.trailer;
+    iframeTrailer.width = "560";
+    iframeTrailer.height = "315";
+    sectionPosterTrailer.append(imgPoster);
+    sectionPosterTrailer.append(iframeTrailer);
+    article.append(sectionPosterTrailer);
+
+
+    // sections appenden aan article
+    article.append(sectionPlot);
+    article.append(sectionDirector);
+    article.append(sectionStars);
+
+  
+
+    // article appenden aan main
+    mainpart.append(article);
   }
 
-  addACtors(){
-
+  addActors(){
+    document.createElement("main").addMe();
   }
-
 }
 
 //test
 const test2 = new Movie("data","data","data","data","data","data","data","data")
-test2.addToBody();
+//test2.addToBody();
 
 
 //nieuwe Actors, Directors, Writers and movies aanmaken. 
@@ -80,7 +134,8 @@ let abhijat_Joshi = new Writer("Abhijat Joshi", 1969, ["Shikara", "Sanju", "Wazi
 let vidhu_Vinoc_Chopra = new Writer("Vidhu Vinoc Chopra", 1952, ["Taalismaan", "Shikara", "Wazir", "Broken Horses"]);
 
 let three_Idiots = new Movie("3 Idiots", "Comedy", 2009, rajkumar_Hirani, 
-[abhijat_Joshi, vidhu_Vinoc_Chopra], [aamir_Khan, mona_Singh, mona_Singh, kareena_Kapoor, madhaven, sharman_Joshi, omi_Vaidya], 
-"https://www.imdb.com/title/tt1187043/mediaviewer/rm1847834624?ref_=ttmi_mi_all_pos_21", "https://www.youtube.com/watch?v=K0eDlFX9GMc", 
+[abhijat_Joshi, vidhu_Vinoc_Chopra], [aamir_Khan, mona_Singh, kareena_Kapoor, madhaven, sharman_Joshi, omi_Vaidya], 
+"../Images/img.jpg", "https://www.youtube.com/embed/K0eDlFX9GMc", 
 "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them idots.");
 
+three_Idiots.addToBody();
