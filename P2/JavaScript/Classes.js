@@ -15,7 +15,7 @@ class Director extends Artist {
 }
 
 class Writer extends Artist {
-  constructor(name, yearOfBirth, booksWritten) {
+  constructor(name, yearOfBirth, booksWritten) { // of scriptsWritten?
     super(name, yearOfBirth);
     this.booksWritten = booksWritten;
   }
@@ -30,7 +30,7 @@ class Actor extends Artist {
 }
 
 class Movie {
-  constructor(title, genre, year, director, writers, stars, poster, trailer, plot) {
+  constructor(title, genre, year, director, writers, stars, poster, trailer, plot)   {
     this.title = title;
     this.genre = genre;
     this.year = year;
