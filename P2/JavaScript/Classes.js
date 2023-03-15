@@ -90,7 +90,6 @@ class Movie {
       var a = document.createElement("a");
       a.innerText = writer.name;
       a.title = writer.name + " has also written: " + writer.booksWritten.join(", ");
-      a.href = writer.photoLink;
       pWriters.append(a);
       pWriters.append(", ");
     });
