@@ -204,6 +204,15 @@ make the navigation links stack on top of each other instead of next to each oth
 }
 }
 
+main {
+    font-size: 4em;
+    text-align: center;
+}
+
+main p{ 
+    font-size: 0.3em;
+}
+
 footer{
     background:rgb(30, 30, 30) ;
     color: #fff;
