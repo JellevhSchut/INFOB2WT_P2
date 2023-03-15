@@ -72,14 +72,33 @@ class Movie {
     var h2Director = document.createElement("h2");
     h2Director.innerText = "Director";
     sectionDirector.append(h2Director);
+    //
     var pDirector = document.createElement("p");
     pDirector.innerText = this.director.name;
     h2Director.append(pDirector);
 
+    var sectionWriters = document.createElement("section");
+    var h2Writers = document.createElement("h2");
+    h2Writers.innerText = "Writers";
+    sectionWriters.append(h2Writers);
+    // tooltips voor de writers
+    var pWriters = document.createElement("p");
+    this.writers.forEach((writer) => {
+      var a = document.createElement("a");
+      a.innerText = writer.name;
+      a.title = writer.name + " has also written: " + writer.booksWritten.join(", ");
+      pWriters.append(a);
+      pWriters.append(", ");
+    });
+    pWriters.removeChild(pWriters.lastChild); // laatste komma weghalen
+    h2Writers.append(pWriters);
+
+
+
     var sectionStars = document.createElement("section");
     var h2Stars = document.createElement("h2");
     h2Stars.innerText = "Stars";
-    sectionDirector.append(h2Stars);
+    sectionStars.append(h2Stars);
     // tooltips voor de actors
     var pStars = document.createElement("p");
     this.stars.forEach((star) => {
@@ -111,6 +130,7 @@ class Movie {
     // sections appenden aan article
     article.append(sectionPlot);
     article.append(sectionDirector);
+    article.append(sectionWriters);
     article.append(sectionStars);
 
   
