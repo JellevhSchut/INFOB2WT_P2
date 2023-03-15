@@ -205,15 +205,23 @@ make the navigation links stack on top of each other instead of next to each oth
 }
 
 main {
-    font-size: 2em;
-    left: 20%;
-    right: 20%;
+    text-align: center;
+}
+
+
+article h1{
+    font-size: 4vw;
+}
+
+section h2{
+    font-size: 2vw;
     text-align: left;
-    position:absolute;
+    padding: 0px 5vw;
 }
 
 main p{ 
-    font-size: 0.3em;
+    font-size: 0.7em;
+    font-weight:lighter;
 }
 
 footer{
