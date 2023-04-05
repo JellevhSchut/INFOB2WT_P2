@@ -144,12 +144,7 @@ class Movie {
   }
 }
 
-//test
-const test2 = new Movie("data","data","data","data","data","data","data","data")
-//test2.addToBody();
-
-
-//nieuwe Actors, Directors, Writers and movies aanmaken. 
+// Actors, Directors, Writers and movies aanmaken. 
 let aamir_Khan = new Actor("Aamir Khan", 1965, ["Koi Jaane Na", "Thugs of Hindostan", "Secret Superstar", "Dil Dhadakne Do", "Talaash", "Dhobi Ghat"], "https://www.imdb.com/name/nm0451148/");
 let mona_Singh = new Actor("Mona Singh", 1981, ["Ek Chup", "Pushpa Impossible", "Laal Singh Chaddha", "Glitch", "Lutf"], "https://www.imdb.com/name/nm1587175/");
 let kareena_Kapoor = new Actor("Kareena Kapoor", 1980, ["Jab we Met", "Omkara", "Ra.One", "Laal Singh Chaddha", "Angrezi Medium"], "https://www.imdb.com/name/nm0004626/");
